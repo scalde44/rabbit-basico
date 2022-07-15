@@ -1,0 +1,23 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: explicacion-rabbit
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+#    addresses: amqp://guest:guest@localhost:5672
+colas-basicas:
+  exchange: mensajero.basico
+  juan:
+    name: juancola.basico
+    routing:
+      key: basico.juan
+colas-objetos:
+  exchange: mensajero.objeto
+  juan:
+    name: juancola.objeto
+    routing:
+      key: objeto.juan
